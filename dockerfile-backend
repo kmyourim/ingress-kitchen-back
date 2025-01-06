@@ -1,0 +1,8 @@
+FROM node:8-alpine
+WORKDIR /backend
+COPY /backend/package*.json ./
+RUN npm install --only=production
+COPY /backend .
+LABEL maintainer="project3 <khany, heeryun, yurim>" \
+      description="project3 backend server"
+ENTRYPOINT ["node", "--inspect=9229", "app.js"]
