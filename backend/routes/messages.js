@@ -55,7 +55,7 @@ const construct = (params) => {
 };
 
 const save = (message) => {
-    console.log("saving message...")
+    console.log("saving message....")
     message.save((err) => {
         if (err) { throw err }
     })
